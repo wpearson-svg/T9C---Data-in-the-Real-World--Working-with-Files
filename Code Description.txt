@@ -1,0 +1,24 @@
+Imports: Load the tools for files, lists, dates, and text.
+
+Main():
+
+Read all lines from the CSV file.
+Keep the header row as is.
+Clean every other row with CleanLine.
+Save the result to Cleaned_Data.csv.
+
+CleanLine(): Split the row at commas, send each column to its own cleaner, and join the pieces back together.
+
+CleanUserID: Trim extra spaces.
+
+CleanName: Trim spaces, capitalize the first letter, lowercase the rest.
+
+CleanTeam: Same as CleanName.
+
+CleanVideoWatched: Trim extra spaces.
+
+CleanDateWatched: Try four date formats and rewrite a match as yyyy-MM-dd. If nothing matches, keep the original.
+
+CleanWatchTime: Remove “mins”, convert number words like “forty” to 40, and make negatives positive. If it can’t understand the value, return blank.
+
+CleanFeedback: Change blank-like entries (-, none, na, no comment) to N/A. Keep real comments.
